@@ -1,27 +1,61 @@
-<!DOCTYPE HTML>
+!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-body {background-color: #66FF99;}
-h1 {font-family: Vladimir script;
-    font-color:#000000;
-    font-size: 40px}
-h2 {font-family: Verdana;
-    font-size: 30px;
-    text-align: center;}
-p  {font-family: French Script MT;
-    font-size: 18px}
-    
-.ewan {width: 500px;
-    height: 1000px;
-    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fyup.com%2Fblog%2Fimportance-of-algebra-i%2F&psig=AOvVaw33aESixWCAkKJepWmdMULx&ust=1698336885439000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJj2mYjMkYIDFQAAAAAdAAAAABAE");}
-</style>
-</head>
-<body>
-<div class="ewan">
-</div>
-<br>
-<br>
-<h2>Quadratic equation</h2>
+    <title>Solitary Butterfly</title>
 
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.2/core.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"></script>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Store Stock Monitoring System</h2>
+
+<h3>Add Product</h3>
+<input id="pid" placeholder="Product ID"><br>
+<input id="name" placeholder="Product Name"><br>
+<input id="qty" type="number" placeholder="Quantity"><br>
+<input id="price" type="number" placeholder="Price"><br>
+<button py-click="add_product()">Add Product</button>
+
+<h3>Update Stock</h3>
+<input id="update_pid" placeholder="Product ID"><br>
+<input id="change_qty" type="number" placeholder="Quantity Change (+ / -)"><br>
+<button py-click="update_stock()">Update Stock</button>
+
+<h3>Inventory</h3>
+<button py-click="view_inventory()>Refresh Inventory</button>
+
+<div id="output"></div>
       
+
